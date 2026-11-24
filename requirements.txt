@@ -8,13 +8,17 @@ asgiref==3.13.0
 attrs==26.1.0
 backoff==2.2.1
 certifi==2026.11.20
+cffi==2.1.1
 charset-normalizer==3.5.3
 click==8.3.3
 confident-trace==0.1.14
+cryptography==50.0.2
 deepeval==4.3.5
 distro==1.9.0
 execnet==2.1.2
 frozenlist==1.8.0
+google-auth==2.63.1
+google-genai==3.6.1
 googleapis-common-protos==1.76.0
 grpcio==1.85.4
 h11==0.16.0
@@ -49,6 +53,9 @@ posthog==7.91.4
 prompt_toolkit==3.0.53
 propcache==0.5.4
 protobuf==7.36.2
+pyasn1==0.6.5
+pyasn1_modules==0.4.2
+pycparser==3.12
 pydantic==2.14.4
 pydantic-settings==2.16.3
 pydantic_core==2.50.5
@@ -67,7 +74,7 @@ setuptools==84.2.1
 shellingham==1.5.4
 sniffio==1.3.1
 tabulate==0.9.0
-tenacity==9.2.1
+tenacity==9.1.4
 tqdm==4.70.1
 truststore==0.10.5
 typer==0.29.2
@@ -75,6 +82,7 @@ typing-inspection==0.4.5
 typing_extensions==4.16.0
 urllib3==2.8.0
 wcwidth==0.9.5
+websockets==17.4
 wheel==0.48.0
 wrapt==2.5.2
 yarl==1.25.1
