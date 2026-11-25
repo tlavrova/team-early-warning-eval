@@ -1,0 +1,26 @@
+[
+  {
+    "name": "sprint_at_risk_blocked",
+    "input": "Sprint ends in 2 days. 3 of 5 tickets are still 'In Progress'. Ana wrote 'waiting on API access' in her last 3 standups.",
+    "expected_output": "risk_level: high. Most sprint work is unfinished with 2 days left and one ticket has been blocked on API access for 3 days. Escalate the access request and agree what moves to the next sprint.",
+    "additional_metadata": {"expected_risk_level": "high"}
+  },
+  {
+    "name": "healthy_sprint",
+    "input": "Sprint ends in 6 days. 4 of 6 tickets are 'Done', 2 are 'In Progress' and updated today. No blockers mentioned in standups.",
+    "expected_output": "risk_level: low. Most work is done, remaining tickets are active and there are no blockers. No action needed beyond normal follow-up.",
+    "additional_metadata": {"expected_risk_level": "low"}
+  },
+  {
+    "name": "overloaded_person",
+    "input": "Sprint ends in 5 days. 10 of 16 tickets are 'Done'. Of the 6 open tickets, 5 are assigned to Marek and were updated yesterday. No blockers mentioned. Marek said 'busy, will get to it' in 2 standups.",
+    "expected_output": "risk_level: medium. Work is concentrated on one person, so progress depends on a single point of capacity. Rebalance some tickets across the team.",
+    "additional_metadata": {"expected_risk_level": "medium"}
+  },
+  {
+    "name": "silent_tickets",
+    "input": "Sprint ends in 4 days. 5 of 8 tickets are 'In Progress' but have had no updates for 5 days. Standup notes are empty for the last 2 days.",
+    "expected_output": "risk_level: high. Most open work shows no visible progress for days and standups give no signal. Check in on the stalled tickets today.",
+    "additional_metadata": {"expected_risk_level": "high"}
+  }
+]
