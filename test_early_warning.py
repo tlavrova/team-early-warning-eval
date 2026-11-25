@@ -22,3 +22,15 @@ def test_warning_is_relevant():
 
     # 4. Fail the test if the score is below 0.7
     assert_test(test_case, [metric])
+
+
+def test_risk_level_is_high():
+    output = get_warning(SNAPSHOT)
+
+    # Find the line that starts with "risk_level:" and take the word after it
+    risk_line = next(
+        line for line in output.splitlines() if line.startswith("risk_level:")
+    )
+    risk_level = risk_line.split(":", 1)[1].strip().lower()
+
+    assert risk_level == "high"
